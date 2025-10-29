@@ -25,6 +25,8 @@ def engineer_features(df):
     if 'order_date' in df.columns:
         df['order_weekday'] = df['order_date'].dt.day_name()
         df['order_hour'] = df['order_date'].dt.hour
+    print("Columns in merged DataFrame:", df.columns.tolist())
+
     if 'promised_time' in df.columns and 'actual_delivery_time' in df.columns:
         df['eta_gap_minutes'] = (df['actual_delivery_time'] - df['promised_time']).dt.total_seconds()/60
         df['delay_flag'] = (df['eta_gap_minutes'] > 0).astype(int)
