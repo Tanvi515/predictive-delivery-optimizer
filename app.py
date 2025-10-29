@@ -13,7 +13,7 @@ from model import train_model, load_model, select_features
 # Page Config
 # -------------------------------
 st.set_page_config(layout="wide", page_title="Predictive Delivery Optimizer")
-st.title("🚚 Predictive Delivery Optimizer — NexGen Logistics")
+st.title("🚚 Predictive Delivery Optimizer — NexGen Logistics Pvt. Ltd.")
 
 DATA_DIR = "Case study internship data"
 
